@@ -35,13 +35,14 @@ header{
  .iconFontRecarga{
   border-radius: 2rem;
 cursor:pointer;
-
   text-align: center;
   width:2.7rem;
   height:2.7rem;
   color: aliceblue;
   padding: 0.4rem;
-
+ }
+ .iconRecarga{
+   cursor: pointer;
  }
  .iconRecarga:hover {
    background: rgb(255, 255, 255,0.6);
