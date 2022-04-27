@@ -4,7 +4,7 @@ import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
 
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { getCountries, getActivities } from '../../action/index'
+import { getCountries } from '../../action/index'
 import Loader from "../Loader/Loader";
 import "./LandingPage.css"
 
@@ -16,9 +16,7 @@ const LandingPage = () => {
 
     const dispatch = useDispatch();
 
-    useEffect(() => {
-        dispatch(getActivities())
-    }, [])//  eslint-disable-line react-hooks/exhaustive-deps
+
     useEffect(() => {
         dispatch(getCountries());
 

@@ -13,14 +13,12 @@ import { faArrowRightRotate, faQuestion } from '@fortawesome/free-solid-svg-icon
 
 
 const Home1 = () => {
-    const [stateaux, setStateaux] = ([activities])
     const allCountries = useSelector((state) => state.countries)
-    const activities = useSelector((state) => state.activities)
     const dispatch = useDispatch()
 
     useEffect(() => {
         dispatch(getCountries())
-    }, [stateaux])
+    }, [])
     // dispatch(clearStateCountries())
 
 
