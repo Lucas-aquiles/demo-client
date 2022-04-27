@@ -15,9 +15,7 @@ const Aside = ({ handlefilterAct, handlefilterContinent, handleOrderly }) => {
     const dispatch = useDispatch()
 
 
-    useEffect(() => {
-        dispatch(getActivities())
-    }, [])//  eslint-disable-line react-hooks/exhaustive-deps
+
 
 
 
