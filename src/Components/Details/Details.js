@@ -26,6 +26,7 @@ const Details = () => {
     useEffect(() => {
 
         dispatch(callId(addres))
+        dispatch(clearStateCountries())
         setTimeout(() => {
             setInit(true)
         }, 2000);
@@ -33,7 +34,7 @@ const Details = () => {
 
         return () => {
             dispatch(clearDetails())
-            dispatch(clearStateCountries())
+
         }
     }, [])//  eslint-disable-line react-hooks/exhaustive-deps
 
