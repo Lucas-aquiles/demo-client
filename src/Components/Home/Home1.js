@@ -21,7 +21,7 @@ const Home1 = () => {
     useEffect(() => {
         // dispatch(clearStateCountries())
         dispatch(getCountries())
-    }, [])
+    }, [allCountries])
 
 
     const [orden, setOrden] = useState('');
