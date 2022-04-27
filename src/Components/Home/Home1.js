@@ -18,10 +18,11 @@ const Home1 = () => {
 
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        // dispatch(clearStateCountries())
-        dispatch(getCountries())
-    }, [allCountries])
+    // useEffect(() => {
+    //     dispatch(getCountries())
+    // }, [allCountries])
+    // dispatch(clearStateCountries())
+
 
 
     const [orden, setOrden] = useState('');
