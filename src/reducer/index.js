@@ -201,7 +201,15 @@ function rootReducer(state = initialState, action) {
                 ...state,
                 favorites: mirar ? state.favorites.concat(mirar) : state.favorites
             }
+        case "DELET_FAVORITE":
+            const estado = state.favorites
+            console.log(action.payload)
+            const resultado = estado.filter(e => e.id !== action.payload)
 
+            return {
+                ...state,
+                favorites: resultado
+            }
 
 
         default:
