@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { getCountries, filter_Activities, filter_Continent, orderlyByName, orderlyByPoblation, getCountriesFront } from '../../action/index'
@@ -31,6 +31,7 @@ const Home1 = () => {
     const [minPageNumberLimit, setminPageNumberLimit] = useState(0) // 5//10
 
 
+    const [lisen, setLisen] = useState("")
     const [orden, setOrden] = useState('');
 
     const [pagina, setPagina] = useState(1);
