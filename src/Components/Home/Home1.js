@@ -139,8 +139,7 @@ const Home1 = () => {
             <div className="container1   ">
                 <section className="box  car" >
 
-                    {pagina === 1 ? currentCountry.slice(0, 9).map(e => <Card key={suma++} name={e.name}
-                        img={e.flag_image} id={e.id} continent={e.continent} population={e.population} capital={e.capital} />) :
+                    {
                         currentCountry.map(e => <Card key={suma++} name={e.name} img={e.flag_image} id={e.id} capital={e.capital} continent={e.continent} population={e.population} />)}
 
                     {/* {currentCountry.map(e => <Card key={e.id} name={e.name} img={e.flag_image} id={e.id} continent={e.continent} />)} */}
