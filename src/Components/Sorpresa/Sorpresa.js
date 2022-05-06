@@ -9,7 +9,7 @@ import { Link } from 'react-router-dom';
 
 const Sorpresa = () => {
 
-    const allPaises = useSelector((state) => state.countries)
+    const allPaises = useSelector((state) => state.countriesAux)
     const [paisoriginal, setPaisoriginal] = useState({})
     const [pais1, setPais1] = useState({})
     const [pais2, setPais2] = useState({})
