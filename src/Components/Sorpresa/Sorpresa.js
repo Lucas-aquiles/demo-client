@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import './Sorpresa.css'
 import { useSelector } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
@@ -10,13 +10,14 @@ import { Link } from 'react-router-dom';
 const Sorpresa = () => {
 
     const allPaises = useSelector((state) => state.countriesAux)
+    console.log(allPaises)
     const [paisoriginal, setPaisoriginal] = useState({})
     const [pais1, setPais1] = useState({})
     const [pais2, setPais2] = useState({})
     const [chequear, setChequear] = useState(false)
     const [chequear1, setChequear1] = useState(false)
     const [paismundial, setPaismundial] = useState(0)
-
+    console.log(paismundial)
 
 
     var paisuplente1 = Math.floor(Math.random() * (250 - 0 + 1)) + 0;
@@ -41,6 +42,7 @@ const Sorpresa = () => {
     }
     var sum = 0;
     let savePoblation = allPaises.map(elemento => sum += elemento.population)
+    console.log(sum)
     function handlePoblation(e) {
         setPaismundial(convertirNumero(sum))
     }
@@ -108,7 +110,7 @@ const Sorpresa = () => {
         comprobar = "nada"
         setTimeout(() => {
             setChequear(false)
-        }, 3000);
+        }, 2000);
 
     }
     var comprobar1 = "ocultar"
@@ -116,7 +118,7 @@ const Sorpresa = () => {
         comprobar1 = "nada"
         setTimeout(() => {
             setChequear1(false)
-        }, 3000);
+        }, 2000);
 
     }
 
@@ -132,7 +134,7 @@ const Sorpresa = () => {
 
                 <div className='itemquestion2'>
                     <h2>  Habitantes:   </h2>
-                    <h2>{paismundial}</h2>
+                    <h2 className='paus'>{paismundial}</h2>
                 </div>
             </div>
 
@@ -140,7 +142,7 @@ const Sorpresa = () => {
             <div className='mitad'>
                 <div className="icon"   >
                     <Link to="/home" >
-                        <FontAwesomeIcon className="iconFont" icon={faAngleLeft} />  </Link>          </div>
+                        <FontAwesomeIcon className="iconFont" icon={faAngleLeft} /> </Link></div>
                 <div className='itemquestion1' >
                     <h1>   ¿ Cuál es la capital de : ?  </h1>
 
