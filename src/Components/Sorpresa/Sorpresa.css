@@ -1,5 +1,5 @@
 .sorpresa{
-    width: 85.1rem;
+    max-width: 100%;
     height: 100vh;
     background: salmon;
     display: flex;
@@ -55,7 +55,7 @@
 display: flex;
 flex-direction: row;
 justify-content: space-around;
-margin-top: 5rem;
+margin-top: 2rem;
 }
 .randondiv>h2{
     position: relative;
@@ -123,15 +123,24 @@ text-align: center;
     font-family: 'Poppins', sans-serif; 
     width: 42.5rem;
     height: 5rem;
-    background-color: rgb(245, 12, 12);
+    background-color: rgb(245, 28, 12);
     font-size: 2rem; 
     bottom: 1.1rem;
     overflow:hidden;
+    bottom: 20px;
 
 }
 .ocultar{
     display: none;
 }
+
+.iconFont{
+    position: relative;
+    left:  -2px;
+    top: -2px;
+}
+
+
 
 
 

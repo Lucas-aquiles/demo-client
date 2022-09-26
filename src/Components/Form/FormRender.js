@@ -236,10 +236,10 @@ const FormRender = () => {
 
       <form className='container_Formulario' onSubmit={e => handleSubmit(e)} >
         <div className='item_containerFormulario' >
-          <label className='labelverqonda'>Nombre:
+          <label className='labelverqonda'>Name:
             <input className='inputformulario' type="text"
               name="name"
-              placeholder="Nombre"
+              placeholder="Name"
               value={input.name}
               onChange={e => handleChange(e)}
             />
@@ -278,7 +278,7 @@ const FormRender = () => {
             <button className='buton_padrastro' onClick={sendDis}>Search</button>
           </div>
           {/* {console.log(dataSearch)} */}
-          {dataSearch.length === 0 && serchAux ? <p className='error_p'> "No encontrado"  </p> : dataSearch.map(e =>
+          {dataSearch.length === 0 && serchAux ? <p className='error_p'> "Not found"  </p> : dataSearch.map(e =>
             <div key={e.id} className='searchfilter'>
               <div className='searchFF'> <img className='imgForm' src={e.flag_image} alt="" /></div>
               <div className='searchFF' > <h5  >  {e.name} </h5> </div>
@@ -301,7 +301,7 @@ const FormRender = () => {
           }
 
 
-          <button className='form_sumit' type='submit'>  Crear Actividades </button>
+          <button className='form_sumit' type='submit'>   Activities Create </button>
         </div>
 
       </form>

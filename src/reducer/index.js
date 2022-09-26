@@ -116,7 +116,7 @@ function rootReducer(state = initialState, action) {
         case "SEARCH_COUNTRY":
 
             const notdat = [{ name: ['No encontrado'], id: "4d4" }]
-            console.log(action.payload)
+            // console.log(action.payload)
             return {
                 ...state,
                 countries: action.payload.length === 0 ? notdat : action.payload
@@ -203,7 +203,7 @@ function rootReducer(state = initialState, action) {
             }
         case "DELET_FAVORITE":
             const estado = state.favorites
-            console.log(action.payload)
+            // console.log(action.payload)
             const resultado = estado.filter(e => e.id !== action.payload)
 
             return {

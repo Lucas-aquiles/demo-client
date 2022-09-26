@@ -26,9 +26,9 @@ const Search = () => {
         <div className='containerSearch'>
             <form >
                 <label className='label_form'> <input type="text" onChange={(e) => handleInputChange(e)}
-                    value={name} placeholder='Buscar Video Games......' />    </label>
+                    value={name} placeholder='Search countries......' />    </label>
 
-                <button className='button_form' type="submit" onClick={(e) => handleSubmit(e)}   >Buscar...</button>
+                <button className='button_form' type="submit" onClick={(e) => handleSubmit(e)}   >Search...</button>
 
             </form>
 

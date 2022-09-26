@@ -27,7 +27,7 @@ export default function Card({ name, img, id, continent, population, capital }) 
         }, 500);
     }
 
-    return (name === 'No encontrado') ? <h1 className='h1_Not'> "No encontrado"  </h1> : (
+    return (name === 'No encontrado') ? <h1 className='h1_Not'> "Not found"  </h1> : (
 
         <div className='container_card clasePrueba'>
             <FontAwesomeIcon onClick={(e) => handleFavorite(id)} className="iconFavorities" icon={faHeart} />

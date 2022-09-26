@@ -10,14 +10,12 @@ import { Link } from 'react-router-dom';
 const Sorpresa = () => {
 
     const allPaises = useSelector((state) => state.countriesAux)
-    console.log(allPaises)
     const [paisoriginal, setPaisoriginal] = useState({})
     const [pais1, setPais1] = useState({})
     const [pais2, setPais2] = useState({})
     const [chequear, setChequear] = useState(false)
     const [chequear1, setChequear1] = useState(false)
     const [paismundial, setPaismundial] = useState(0)
-    console.log(paismundial)
 
 
     var paisuplente1 = Math.floor(Math.random() * (250 - 0 + 1)) + 0;
@@ -40,11 +38,17 @@ const Sorpresa = () => {
             iC
         })
     }
-    var sum = 0;
-    let savePoblation = allPaises.map(elemento => sum += elemento.population)
-    console.log(sum)
+
+    function sumatoria (){
+        var sum = 0;
+        allPaises.map(elemento => sum += elemento.population)
+            return sum
+    }
+   
+
+
     function handlePoblation(e) {
-        setPaismundial(convertirNumero(sum))
+        setPaismundial(convertirNumero(sumatoria()))
     }
 
 
@@ -128,12 +132,12 @@ const Sorpresa = () => {
         <div className='sorpresa'>
             <div>
                 <div className='itemquestion1'>
-                    <h1>   ¿ Cuál es la Población Mundial?  </h1>
-                    <button onClick={e => handlePoblation(e)}> Quiero Saber.... </button>
+                    <h1>   ¿What is the world population? </h1>
+                    <button onClick={e => handlePoblation(e)}> I Want to Know.... </button>
                 </div>
 
                 <div className='itemquestion2'>
-                    <h2>  Habitantes:   </h2>
+                    <h2>  Population:   </h2>
                     <h2 className='paus'>{paismundial}</h2>
                 </div>
             </div>
@@ -144,7 +148,7 @@ const Sorpresa = () => {
                     <Link to="/home" >
                         <FontAwesomeIcon className="iconFont" icon={faAngleLeft} /> </Link></div>
                 <div className='itemquestion1' >
-                    <h1>   ¿ Cuál es la capital de : ?  </h1>
+                    <h1>   ¿ What is the capital : ?  </h1>
 
                     <button onClick={e => cac(e)}>  Play </button>
 
@@ -175,7 +179,7 @@ const Sorpresa = () => {
                     <div className={`perfect ${comprobar}`}   >
                         <h2> Perfect is {capital}    </h2>
                     </div>
-                    <div className={`segui ${comprobar1}`}>  <h2> Sigue participando...  </h2></div>
+                    <div className={`segui ${comprobar1}`}>  <h2> Continue ...  </h2></div>
 
 
 
