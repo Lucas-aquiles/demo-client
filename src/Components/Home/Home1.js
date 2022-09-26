@@ -128,10 +128,10 @@ const Home1 = () => {
         <div className='container'>
             <header>
                 <div onClick={(e) => handleRecarga(e)} className='iconRecarga'>  <FontAwesomeIcon className="iconFontRecarga" icon={faArrowRightRotate} />  </div>
-                <button className='bth link'>   <Link className='link' to="/question"> Extra </Link> </button>
-                <button className='bth '>  <Link className='link ' to="/favorite"> Favorites </Link>       </button>
+                <Link className='link ' to="/question"> <button className='bth'>    Extra  </button></Link>
+                <Link className='link ' to="/favorite"><button className='bth '>   Favorites        </button></Link>
 
-                <button className='bth'> <Link className='link' to="/create">  Activities Create</Link>  </button>
+                <Link className='link' to="/create"><button className='bth'>   Activities Create  </button></Link>
 
             </header>
             {/* --------------------------------------------------- */}

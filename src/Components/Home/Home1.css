@@ -63,7 +63,12 @@ cursor:pointer;
   width: 13rem;
   border-radius: 12px 12px 12px 12px;
   border-color: white;
-  margin-right: 2rem;
+  /* margin-right: 2rem; */
+  color:  white;
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 500;
+  font-size: 1.2rem;
 
 }
 .bth:hover{
@@ -77,11 +82,13 @@ cursor:pointer;
 
 
 .link{
+  align-self: center;
+
   text-decoration: none;
   font-family: 'Poppins', sans-serif;
-font-weight: 500;
-font-size: 1.2rem;
+
 color: aliceblue;
+width: auto;
 }
 
 
@@ -144,11 +151,12 @@ aside{
     }
   }
    */
-  @media (max-width: 500px) {
+  /* @media (max-width: 500px) {
     .container {
       flex-direction: column;
+      max-width: 100%;
     }
-  }
+  } */
 
   
  @media screen  and (max-width: 550px){ 

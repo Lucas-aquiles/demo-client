@@ -182,10 +182,9 @@ margin-right: 1%;
      display: flex;
      flex-direction: column;
      justify-content: space-between;
-     height: 100vh;
+     height: auto;
      max-width: 100%;
-     margin: 0;
-padding: 0;
+     height: 100vh;
 
    }
   .item_1{
@@ -229,8 +228,7 @@ margin-top: 1%;
 
 
 .item_2{
-  margin: 0;
-	padding: 0;
+ 
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -238,7 +236,6 @@ margin-top: 1%;
   border-top:solid;
   border-color: #7a7a7a;
   background: rgba(255, 255, 255, 0.68);
-
 } 
 
 .item_2 p{

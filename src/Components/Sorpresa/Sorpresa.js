@@ -131,9 +131,9 @@ const Sorpresa = () => {
     return (
         <div className='sorpresa'>
             <div>
-                <div className='itemquestion1'>
+                <div  onClick={e => handlePoblation(e)} className='itemquestion1'>
                     <h1>   ¿What is the world population? </h1>
-                    <button onClick={e => handlePoblation(e)}> I Want to Know.... </button>
+                    <button > I Want to Know.... </button>
                 </div>
 
                 <div className='itemquestion2'>
