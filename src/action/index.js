@@ -3,7 +3,6 @@ const axios = require('axios')
 
 export function getCountries() {
     return async function (dispatch) {
-        https://demo-back-countries.onrender.com/
         const json = await axios.get('https://demo-back-countries.onrender.com/countries')
         // console.log("aaaaa", json.data, "aaaaa")
         return dispatch({
