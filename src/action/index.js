@@ -3,7 +3,8 @@ const axios = require('axios')
 
 export function getCountries() {
     return async function (dispatch) {
-        const json = await axios.get('https://example-production-5ec3.up.railway.app/countries')
+        https://demo-back-countries.onrender.com/
+        const json = await axios.get('https://demo-back-countries.onrender.com/countries')
         // console.log("aaaaa", json.data, "aaaaa")
         return dispatch({
             type: 'GET_COUNTRIES',
@@ -25,7 +26,7 @@ export function filter_Activities(payload) {
 export function getActivities() {
     return function (dispatch) {
         try {
-            return fetch("https://example-production-5ec3.up.railway.app/activities")
+            return fetch("https://demo-back-countries.onrender.com/activities")
                 .then(response => response.json())
                 .then(activity => {
                     dispatch({
@@ -64,7 +65,7 @@ export function orderlyByPoblation(payload) {
 export function searchCountry(payload) {
     return async function (dispatch) {
         try {
-            const json = await axios.get(`https://example-production-5ec3.up.railway.app/countries?name=${payload}`)
+            const json = await axios.get(`https://demo-back-countries.onrender.com/countries?name=${payload}`)
             // console.log("aaaaa", json.data, "aaaaa")
             return dispatch({
                 type: 'SEARCH_COUNTRY',
@@ -96,7 +97,7 @@ export function searchFilter(payload) {
 
 export function postActivities(payload) {
     return async function (dispatch) {
-        const result = await axios.post("https://example-production-5ec3.up.railway.app/activities", payload);
+        const result = await axios.post("https://demo-back-countries.onrender.com/activities", payload);
         return dispatch({
             type: "SEND_POST",
             payload: result
@@ -124,7 +125,7 @@ export function clearError_Create() {
 export function callId(payload) {
     return function (dispatch) {
         try {
-            return fetch(`https://example-production-5ec3.up.railway.app/countries/${payload}`)
+            return fetch(`https://demo-back-countries.onrender.com/countries/${payload}`)
                 .then(response => response.json())
                 .then(details => {
                     dispatch({
