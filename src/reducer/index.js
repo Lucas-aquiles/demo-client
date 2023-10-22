@@ -15,7 +15,17 @@ function rootReducer(state = initialState, action) {
         case "GET_COUNTRIES":
             return {
                 ...state,
-                countries: action.payload,
+                countries: action.payload.map(e => {
+                    return {
+                        name: e.name.common,
+                        id: e.cca3,
+                        continent: e.continents[0],
+                        flag_image: e.flags.svg,
+                        population: e.population,
+                        capital: e.capital ? e.capital : "no encontrado",
+                    }
+                })
+                ,
 
                 countriesAux: action.payload
             };
