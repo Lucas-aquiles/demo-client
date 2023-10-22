@@ -17,7 +17,7 @@ const Home1 = () => {
 
     const allCountries = useSelector((state) => state.countries)
 
-    // console.log(allCountries)
+    console.log(allCountries)
     const dispatch = useDispatch()
 
     // useEffect(() => {
