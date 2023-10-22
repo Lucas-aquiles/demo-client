@@ -1,7 +1,7 @@
 import React from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
-
+import {data} from "../../data"
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { getCountries } from '../../action/index'
@@ -15,7 +15,7 @@ import { Link } from 'react-router-dom';
 const LandingPage = () => {
     const [init, setInit] = useState(false)
     const dispatch = useDispatch();
-
+console.log(data.info())
     useEffect(() => {
         dispatch(getCountries());
         setTimeout(() => {
@@ -37,7 +37,7 @@ const LandingPage = () => {
                 <div className='item_1'>
                     <h1 >Country App</h1>
                     <p>
-                    Find countries and activities, let's go .......
+                    Find countries and activities, let's go .
                     </p>
                     <Link to="/home" className='wrap'>
                         <button className='btlp' >Enter</button>
