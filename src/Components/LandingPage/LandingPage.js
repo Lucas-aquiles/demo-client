@@ -37,7 +37,7 @@ console.log(data.info())
                 <div className='item_1'>
                     <h1 >Country App</h1>
                     <p>
-                    Find countries and activities, let's go .
+                    Find countries and activities, let's go ...
                     </p>
                     <Link to="/home" className='wrap'>
                         <button className='btlp' >Enter</button>
