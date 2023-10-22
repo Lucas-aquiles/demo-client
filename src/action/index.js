@@ -1,13 +1,14 @@
 const axios = require('axios')
+const infor = require("../data")
 
 
 export function getCountries() {
     return async function (dispatch) {
-        const json = await axios.get('https://demo-back-countries.onrender.com/countries')
-        // console.log("aaaaa", json.data, "aaaaa")
+        const json = await infor.info();
+        console.log(json)
         return dispatch({
             type: 'GET_COUNTRIES',
-            payload: json.data
+            payload: json
         })
     }
 }
@@ -25,13 +26,13 @@ export function filter_Activities(payload) {
 export function getActivities() {
     return function (dispatch) {
         try {
-            return fetch("https://demo-back-countries.onrender.com/activities")
-                .then(response => response.json())
-                .then(activity => {
-                    dispatch({
-                        type: "GET_ACTIVITY", payload: activity
-                    });
-                })
+            // return fetch("http://localhost:3001/activities")
+            //     .then(response => response.json())
+            //     .then(activity => {
+            //         dispatch({
+            //             type: "GET_ACTIVITY", payload: activity
+            //         });
+            //     })
         } catch (error) {
             throw new Error(error)
         }
@@ -64,12 +65,12 @@ export function orderlyByPoblation(payload) {
 export function searchCountry(payload) {
     return async function (dispatch) {
         try {
-            const json = await axios.get(`https://demo-back-countries.onrender.com/countries?name=${payload}`)
-            // console.log("aaaaa", json.data, "aaaaa")
-            return dispatch({
-                type: 'SEARCH_COUNTRY',
-                payload: json.data
-            })
+            // const json = await axios.get(`http://localhost:3001/countries?name=${payload}`)
+            // // console.log("aaaaa", json.data, "aaaaa")
+            // return dispatch({
+            //     type: 'SEARCH_COUNTRY',
+            //     payload: json.data
+            // })
         } catch (err) {
             return dispatch({
                 type: 'ERROR_SEARCH',
@@ -96,11 +97,11 @@ export function searchFilter(payload) {
 
 export function postActivities(payload) {
     return async function (dispatch) {
-        const result = await axios.post("https://demo-back-countries.onrender.com/activities", payload);
-        return dispatch({
-            type: "SEND_POST",
-            payload: result
-        })
+        // const result = await axios.post("http://localhost:3001/activities", payload);
+        // return dispatch({
+        //     type: "SEND_POST",
+        //     payload: result
+        // })
 
     }
 }
@@ -124,13 +125,13 @@ export function clearError_Create() {
 export function callId(payload) {
     return function (dispatch) {
         try {
-            return fetch(`https://demo-back-countries.onrender.com/countries/${payload}`)
-                .then(response => response.json())
-                .then(details => {
-                    dispatch({
-                        type: "CALL_ID", payload: details
-                    });
-                })
+            // return fetch(`http://localhost:3001/countries/${payload}`)
+            //     .then(response => response.json())
+            //     .then(details => {
+            //         dispatch({
+            //             type: "CALL_ID", payload: details
+            //         });
+            //     })
         } catch (error) {
             throw new Error(error)
         }
@@ -157,6 +158,7 @@ export function getFavorite(payload) {
         payload
     }
 }
+
 export function deletFavorite(payload) {
     return {
         type: "DELET_FAVORITE",
@@ -166,9 +168,3 @@ export function deletFavorite(payload) {
 
 
 
-
-// "@fortawesome/fontawesome-svg-core",
-//     "@fortawesome/free-brands-svg-icons",
-//     "@fortawesome/free-regular-svg-icons"
-//     "@fortawesome/free-solid-svg-icons"
-//     "@fortawesome/react-fontawesome"
